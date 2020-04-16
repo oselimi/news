@@ -1,0 +1,32 @@
+<h1 class="title", align="center"> Login</h1>
+<div class="form">
+<%= form_for :session do |s| %>
+ <div class="field">
+  <%= s.label :email %>
+  <div class="control has-icons-left has-icons-right">
+    <%= s.email_field :email, class: "input is-danger" %>
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
+  </div>
+</div>
+<div class="field">
+  <%= s.label :password %>
+  <div class="control has-icons-left has-icons-right">
+    <%= s.password_field :password, class: "input is-danger" %>
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
+  </div>
+</div>
+<div class="button-1">
+    <%= s.submit %>
+  </div>
+<% end %>
+</div>
