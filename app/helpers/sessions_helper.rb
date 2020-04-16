@@ -14,7 +14,7 @@ module SessionsHelper
   def log_out
     session[:user_id] = nil
     flash[:notice] = "Now you logged out"
-    redirect_to login_path
+    redirect_to root_path
   end
 
   def require_user
