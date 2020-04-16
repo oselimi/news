@@ -2,12 +2,17 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        My profile
+         User Name: <%= @user.name %>
       </h1>
-      <h2 class="subtitle">
-        <%= @user.name %>
-        <%= @user.email %>
       </h2>
     </div>
   </div>
+  <br/><br/>
+  <%if current_user %>
+  <%= link_to 'Edit', edit_user_path, class:"button is-warning" %>
+  <%= link_to 'Delete', user_path, method: :delete, data: {confirm: "Are you sure?"},class:"button is-danger" %>
 </section>
+<br/>
+<%= render 'articles/article', obj: @user.articles %>
+<%end%>
+

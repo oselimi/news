@@ -4,10 +4,9 @@
   <%= link_to 'Sign up', signup_path, class: "button is-info is-outlined"  %>
   <% if logged_in? %>
     <%= link_to 'logout', logout_path, method: :delete, class: "button is-success"  %>
-    <%= link_to 'Create Article', new_article_path, class: "button is-info is-outlined"  %>
+    <%= link_to 'Profile', user_path(current_user), class: "button is-info is-outlined" %>
   <% else %>
     <%= link_to 'login', login_path, class: "button is-success" %>
   <% end %>
   </div>
-
   <hr>

@@ -11,6 +11,9 @@
 
   <body>
     <%= render 'layouts/navbar'%>
+    <% if logged_in? %>
+      <%= link_to 'Create Article', new_article_path, class: "button is-info is-outlined" %>
+    <% end %>
     <%= render 'shared/flash'%>
     <%= yield %>
     <%= debug(params) if Rails.env.developmen? %>
